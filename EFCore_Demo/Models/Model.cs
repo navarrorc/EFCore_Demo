@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 
 namespace EFCore_Demo.Models
@@ -13,7 +11,9 @@ namespace EFCore_Demo.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EFCore_Demo.AspNetCore.NewDb;Trusted_Connection=True;ConnectRetryCount=0");
+            optionsBuilder.UseSqlServer(
+                @"Server=(localdb)\mssqllocaldb;Database=BlogDb;"
+                + "Trusted_Connection = True;");
         }
     }
 
